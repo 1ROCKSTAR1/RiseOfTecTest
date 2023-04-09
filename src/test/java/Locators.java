@@ -27,4 +27,22 @@ public class Locators {
     public static SelenideElement resoursePanel = $x("//*[@class=\"resource-panel\"]");
     public static SelenideElement contentPanel = $x("//*[@class=\"content-panel\"]");
     public static SelenideElement infoPanel = $x("//*[@class=\"info-panel\"]");
+
+    // ЛОКАТОРЫ ЗВУКОВЫХ НАСТРОЕК
+    public static SelenideElement allSoundsOn = $x("//*[@id=\"sfx_on\"]");
+    public static SelenideElement allSoundsOff = $x("//*[@id=\"sfx_off\"]");
+
+    public static SelenideElement eventsEffectsOn = $x("//*[@id=\"sfx_events_on\"]");
+    public static SelenideElement eventsEffectsOff = $x("//*[@id=\"sfx_events_off\"]");
+
+    public static SelenideElement eventsEffectsActionsOn = $x("//*[@id=\"sfx_actions_on\"]");
+    public static SelenideElement eventsEffectsActionsOff = $x("//*[@id=\"sfx_actions_off\"]");
+
+    public static SelenideElement allTheMusicOn = $x("//*[@id=\"music_on\"]");
+    public static SelenideElement allTheMusicOff = $x("//*[@id=\"music_off\"]");
+
+    public static SelenideElement scenariosMusicOn = $x("//*[@id=\"music_scripts_on\"]");
+    public static SelenideElement scenarioMusicOff = $x("//*[@id=\"music_scripts_off\"]");
+
+    public static SelenideElement returnToMainSettingsButton = $x("//*[@id=\"btnToGeneralSettings\"]");
 }

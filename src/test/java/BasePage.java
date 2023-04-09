@@ -9,7 +9,7 @@ public class BasePage {
     public BasePage(String url) {
         Selenide.open(url);
     }
-
+            //////////////////////////////  ОПИСАНИЕ РАБОЧИХ МЕТОДОВ ДЛЯ ПРОВЕРОК \\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\
     public void goThroughTabs() throws InterruptedException, RuntimeException {
         Thread.sleep(2000);
         Locators.buildingButton.click();
