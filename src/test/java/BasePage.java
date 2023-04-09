@@ -9,6 +9,10 @@ public class BasePage {
     public BasePage(String url) {
         Selenide.open(url);
     }
+    String actualMessage = "Настройки музыки и эффектов";
+    String expectedMessage = Locators.contentPanel.getText();
+
+
             //////////////////////////////  ОПИСАНИЕ РАБОЧИХ МЕТОДОВ ДЛЯ ПРОВЕРОК \\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\
     public void goThroughTabs() throws InterruptedException, RuntimeException {
         Thread.sleep(2000);
@@ -23,6 +27,7 @@ public class BasePage {
         Locators.cityButton.click();
 
     }
+    //////////////////////////////  ОПИСАНИЕ ПРОВЕРОК ВКЛ/ВЫКЛ ТЁМНОЙ ТЕМЫ \\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\
     public void blackThemeOnAndOffSettings() throws InterruptedException {
         Thread.sleep(1000);
         Locators.settingsButton.click();
@@ -170,5 +175,12 @@ public class BasePage {
         Locators.discordButton.click();
         $x("//*[@class=\"content-panel\"]").should(Condition.attribute( "style","color: black;"));
     }
-
+    //////////////////////////////  ОПИСАНИЕ ПРОВЕРОК ЗВУКОВЫХ НАСТРОЕК + (RADIO - BUTTONS) \\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\
+    public void soundSettingsButtonWorks() throws InterruptedException {
+        Thread.sleep(1000);
+        Locators.settingsButton.click();
+        Thread.sleep(1000);
+        Locators.soundSettingsButton.click();
+        Assert.assertEquals(actualMessage,expectedMessage);
+    }
 }

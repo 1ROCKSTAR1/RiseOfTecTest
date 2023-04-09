@@ -1,8 +1,8 @@
 import org.junit.Test;
 
-public class ThemeTest extends Main{
+public class CommonTest extends Main {
 
-    private final static String BASE_URL = "http://localhost:8080/";
+    public final static String BASE_URL = "http://localhost:8080/";
 
     @Test // ТЕСТ КОТОРЫЙ ПРОБЕГАЕТСЯ ПО ВКЛАДКАМ ИГРЫ
     public void firstTest() throws InterruptedException {
@@ -38,5 +38,13 @@ public class ThemeTest extends Main{
     public void themeDiscordTest() throws InterruptedException {
         BasePage basePage = new BasePage(BASE_URL);
         basePage.blackThemeOnAndOffDiscord();
+    }
+
+    //////////////////////////////  ТЕСТЫ ЗВУКОВЫХ НАСТРОЕК \\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\
+
+    @Test // ПРОВЕРКА РАБОТОСПОСОБНОСТИ КЛАВИШИ "ЗВУКОВЫЕ НАСТРОЙКИ
+    public void soundButtonWorks() throws InterruptedException {
+        BasePage basePage = new BasePage(BASE_URL);
+        basePage.soundSettingsButtonWorks();
     }
 }
